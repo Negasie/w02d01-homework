@@ -165,12 +165,22 @@ const bondFilms = [
 	
 	const bondTitles = []
 	for(let key in bondFilms) {
-		bondTitles[key] = bondFilms[key].title;
-	
+		bondTitles[key] = bondFilms[key].title;	
 	console.log(bondTitles[key]);
 }
 
 
+
+//	6.	Create a new array oddBonds, of only the Bond films released 
+//	on odd-numbered years.
+	const oddBonds = []
+		for (let key in bondFilms) {
+			oddBonds[key] = bondFilms[key].year;
+			if(oddBonds[key] % 2 != 0){
+				console.log(oddBonds[key]);
+			}
+			
+		}
 
 
 
