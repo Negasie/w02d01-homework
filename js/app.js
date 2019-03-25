@@ -183,8 +183,25 @@ const bondFilms = [
 		}
 
 
+//	7.	Determine the total cumulative gross of the Bond franchise, 
+//		and console.log the result.
 
+//		Hint: To make the grosses into usable numbers, look into the 
+//		.replace Javascript method (there are many ways to do this, 
+//		however). Look into parseInt() also.
 
+	let totalGrossSum = 0;
+
+for (let i = 0; i< bondFilms.length; i++){
+	  bondFilms[i].gross = bondFilms[i].gross.replace("$", "");
+	  bondFilms[i].gross = bondFilms[i].gross.replace(",", "");
+	  bondFilms[i].gross = bondFilms[i].gross.replace(",", "");
+  	  bondFilms[i].gross = bondFilms[i].gross.replace(",", "");
+
+  	  totalGrossSum = totalGrossSum + parseInt(bondFilms[i].gross);
+	  console.log(bondFilms[i].gross);
+}
+	  console.log(totalGrossSum);
 
 
 
